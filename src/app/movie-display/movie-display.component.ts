@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Movies } from '../models/movies.model';
 
 @Component({
   selector: 'app-movie-display',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './movie-display.component.scss'
 })
 export class MovieDisplayComponent {
+  @Input() movie: Movies | undefined;
 
 }

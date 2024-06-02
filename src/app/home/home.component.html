@@ -1,8 +1,13 @@
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-md-12">
             <p>Hello {{name}}</p>
             <input type="text" class="form-control" [(ngModel)]="name" id="movieSearch" aria-describedby="movies" placeholder="Enter name">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let movie of movieList">
+            <app-movie-display [movie]="movie"></app-movie-display>
         </div>
     </div>
 </div>

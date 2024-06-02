@@ -7,10 +7,17 @@ import { Movies } from '../models/movies.model';
   providedIn: 'root'
 })
 export class MoviesService {
+  moviesUrl = 'http://localhost:3000/movies';
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
-  getMovies(): Observable<Movies[]>  {
-    return this.http.get<Movies[]>('assets/mockdata/movies.json');
+  async getAllMovies(): Promise<Movies[]> {
+    const data = await fetch(this.moviesUrl);
+    return (await data.json()) ?? [];
+  }
+
+  async getMovieById(id: number): Promise<Movies | undefined> {
+    const data = await fetch(`${this.moviesUrl}/${id}`);
+    return (await data.json()) ?? {};
   }
 }
