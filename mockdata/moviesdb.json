@@ -1,85 +1,94 @@
 {
-    "movies":  [
-        {
-            "id": 1,
-            "name": "Deadpool",
-            "genre": "action",
-            "image": "assets/Deadpool.png",
-            "shortDesc": "",
-            "longDesc": ""
-        },
-        {
-            "id": 2,
-            "name": "Spirited Away",
-            "genre": "anime",
-            "image": "assets/spirited.jpg",
-            "shortDesc": "",
-            "longDesc": ""
-        
-        },
-        {
-            "id": 3,
-            "name": "Beetlejuice",
-            "genre": "comedy",
-            "image": "assets/Beetlejuice.png",
-            "shortDesc": "",
-            "longDesc": ""
-        },
-        {
-            "id": 4,
-            "name": "Hocus Pocus",
-            "genre": "comedy",
-            "image": "assets/hocuspocus.jpeg",
-            "shortDesc": "",
-            "longDesc": ""
-        },
-        {
-            "id": 5,
-            "name": "X-Men",
-            "genre": "action",
-            "image": "assets/xmen.jpeg",
-            "shortDesc": "",
-            "longDesc": ""
-        },
-        {
-            "id": 6,
-            "name": "Mallrats",
-            "genre": "comedy",
-            "image": "assets/Mallrats.jpeg",
-            "shortDesc": "",
-            "longDesc": ""
-        },
-        {
-            "id": 7,
-            "name": "Dogma",
-            "genre": "comedy",
-            "image": "assets/dogma.jpeg",
-            "shortDesc": "",
-            "longDesc": ""
-        },
-        {
-            "id": 8,
-            "name": "Finding Nemo",
-            "genre": "anime",
-            "image": "assets/findingnemo.jpeg",
-            "shortDesc": "",
-            "longDesc": ""
-        },
-        {
-            "id": 9,
-            "name": "Lord of the Rings",
-            "genre": "action",
-            "image": "assets/lordoftherings.jpg",
-            "shortDesc": "assets/lordoftherings.jpg",
-            "longDesc": ""
-        },
-        {
-            "id": 10,
-            "name": "Harry Potter",
-            "genre": "action",
-            "image": "assets/harrypotter.jpg",
-            "shortDesc": "",
-            "longDesc": ""
-        }
+  "movies": [
+    {
+      "id": "1",
+      "name": "Deadpool",
+      "genre": "action",
+      "image": "assets/Deadpool.png",
+      "shortDesc": "",
+      "longDesc": ""
+    },
+    {
+      "id": "2",
+      "name": "Spirited Away",
+      "genre": "anime",
+      "image": "assets/spirited.jpg",
+      "shortDesc": "",
+      "longDesc": ""
+    },
+    {
+      "id": "3",
+      "name": "Beetlejuice",
+      "genre": "comedy",
+      "image": "assets/Beetlejuice.png",
+      "shortDesc": "",
+      "longDesc": ""
+    },
+    {
+      "id": "4",
+      "name": "Hocus Pocus",
+      "genre": "comedy",
+      "image": "assets/hocuspocus.jpeg",
+      "shortDesc": "",
+      "longDesc": ""
+    },
+    {
+      "id": "5",
+      "name": "X-Men",
+      "genre": "action",
+      "image": "assets/xmen.jpeg",
+      "shortDesc": "",
+      "longDesc": ""
+    },
+    {
+      "id": "6",
+      "name": "Mallrats",
+      "genre": "comedy",
+      "image": "assets/Mallrats.jpeg",
+      "shortDesc": "",
+      "longDesc": ""
+    },
+    {
+      "id": "7",
+      "name": "Dogma",
+      "genre": "comedy",
+      "image": "assets/dogma.jpeg",
+      "shortDesc": "",
+      "longDesc": ""
+    },
+    {
+      "id": "8",
+      "name": "Finding Nemo",
+      "genre": "anime",
+      "image": "assets/findingnemo.jpeg",
+      "shortDesc": "",
+      "longDesc": ""
+    },
+    {
+      "id": "9",
+      "name": "Lord of the Rings",
+      "genre": "action",
+      "image": "assets/lordoftherings.jpg",
+      "shortDesc": "assets/lordoftherings.jpg",
+      "longDesc": ""
+    },
+    {
+      "id": "10",
+      "name": "Harry Potter",
+      "genre": "action",
+      "image": "assets/harrypotter.jpg",
+      "shortDesc": "",
+      "longDesc": ""
+    },
+    {
+      "id": 11,
+      "name": "name of movie"
+    },
+    {
+      "id": 11,
+      "name": "deadpool 2",
+      "genre": "Action",
+      "longDesc": "new movie"
+    }
   ]
 }

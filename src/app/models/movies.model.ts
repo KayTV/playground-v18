@@ -3,4 +3,6 @@ export interface Movies {
     name: string;
     genre?: string;
     image?: string;
+    shortDesc?: string;
+    longDesc?: string;
 }

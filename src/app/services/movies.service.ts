@@ -20,4 +20,37 @@ export class MoviesService {
     const data = await fetch(`${this.moviesUrl}/${id}`);
     return (await data.json()) ?? {};
   }
+
+  async addMovie(body: Movies): Promise<Movies | undefined> {
+    const data = await fetch(this.moviesUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body)
+    });
+    return (await data.json()) ?? {};
+  }
+
+  async updateMovieById(id: number, body: Movies): Promise<Movies | undefined> {
+    const data = await fetch(`${this.moviesUrl}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    });
+    return (await data.json()) ?? {};
+  }
+
+  async deleteMovieById(id: number, body: Movies): Promise<Movies | undefined> {
+    const data = await fetch(`${this.moviesUrl}/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    });
+    return (await data.json()) ?? {};
+  }
 }

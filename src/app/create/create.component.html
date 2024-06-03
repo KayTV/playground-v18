@@ -1,8 +1,25 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            <label for="movieTitle">Movie Title:</label>
-            <input type="text" class="form-control" id="movieTitle" aria-describedby="movies" placeholder="Enter name">
+    <form [formGroup]="movieForm" (submit)="submitMovie()">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="movieTitle">Movie Title:</label>
+                <input type="text" class="form-control" id="movieTitle" aria-describedby="movies" formControlName="movieTitle" placeholder="Enter name">
+            </div>
+            <div class="col-md-4">
+                <label for="movieTitle">Genre:</label>
+                <input type="text" class="form-control" id="movieGenre" aria-describedby="genre" formControlName="genre" placeholder="Genre">
+            </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="movieTitle">Description:</label>
+                <input type="text" class="form-control" id="description" aria-describedby="description" formControlName="description" placeholder="Description">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary">Create Movie</button>
+            </div>
+        </div>
+    </form>     
 </div>
