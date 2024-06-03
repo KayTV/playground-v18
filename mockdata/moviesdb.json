@@ -4,62 +4,82 @@
             "id": 1,
             "name": "Deadpool",
             "genre": "action",
-            "image": ""
+            "image": "assets/Deadpool.png",
+            "shortDesc": "",
+            "longDesc": ""
         },
         {
             "id": 2,
             "name": "Spirited Away",
             "genre": "anime",
-            "image": ""
+            "image": "assets/spirited.jpg",
+            "shortDesc": "",
+            "longDesc": ""
         
         },
         {
             "id": 3,
             "name": "Beetlejuice",
             "genre": "comedy",
-            "image": ""
+            "image": "assets/Beetlejuice.png",
+            "shortDesc": "",
+            "longDesc": ""
         },
         {
             "id": 4,
             "name": "Hocus Pocus",
             "genre": "comedy",
-            "image": ""
+            "image": "assets/hocuspocus.jpeg",
+            "shortDesc": "",
+            "longDesc": ""
         },
         {
             "id": 5,
             "name": "X-Men",
             "genre": "action",
-            "image": ""
+            "image": "assets/xmen.jpeg",
+            "shortDesc": "",
+            "longDesc": ""
         },
         {
             "id": 6,
             "name": "Mallrats",
             "genre": "comedy",
-            "image": ""
+            "image": "assets/Mallrats.jpeg",
+            "shortDesc": "",
+            "longDesc": ""
         },
         {
             "id": 7,
             "name": "Dogma",
             "genre": "comedy",
-            "image": ""
+            "image": "assets/dogma.jpeg",
+            "shortDesc": "",
+            "longDesc": ""
         },
         {
             "id": 8,
             "name": "Finding Nemo",
             "genre": "anime",
-            "image": ""
+            "image": "assets/findingnemo.jpeg",
+            "shortDesc": "",
+            "longDesc": ""
         },
         {
             "id": 9,
             "name": "Lord of the Rings",
             "genre": "action",
-            "image": 102
+            "image": "assets/lordoftherings.jpg",
+            "shortDesc": "assets/lordoftherings.jpg",
+            "longDesc": ""
         },
         {
             "id": 10,
             "name": "Harry Potter",
             "genre": "action",
-            "image": 10
+            "image": "assets/harrypotter.jpg",
+            "shortDesc": "",
+            "longDesc": ""
         }
   ]
 }

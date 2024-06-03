@@ -5,11 +5,12 @@ import { MoviesService } from '../services/movies.service';
 import { Movies } from '../models/movies.model';
 import { CommonModule } from '@angular/common';
 import { MovieDisplayComponent } from '../movie-display/movie-display.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CreateComponent, FormsModule, CommonModule, MovieDisplayComponent],
+  imports: [CreateComponent, FormsModule, CommonModule, MovieDisplayComponent, RouterModule],
   providers: [MoviesService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

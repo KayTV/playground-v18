@@ -1,6 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+            <a [routerLink]="['/create']" class="btn btn-primary">Add A New Movie</a>
+        </div>
+        <div class="col-md-12">
             <p>Hello {{name}}</p>
             <input type="text" class="form-control" [(ngModel)]="name" id="movieSearch" aria-describedby="movies" placeholder="Enter name">
         </div>
