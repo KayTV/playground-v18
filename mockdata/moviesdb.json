@@ -73,14 +73,6 @@
       "longDesc": ""
     },
     {
-      "id": "10",
-      "name": "Harry Potter",
-      "genre": "action",
-      "image": "assets/harrypotter.jpg",
-      "shortDesc": "",
-      "longDesc": ""
-    },
-    {
       "id": 11,
       "name": "name of movie"
     },
@@ -89,6 +81,12 @@
       "name": "deadpool 2",
       "genre": "Action",
       "longDesc": "new movie"
+    },
+    {
+      "id": null,
+      "name": "Guardians of the Galaxy",
+      "genre": "Action",
+      "longDesc": "new movie description"
     }
   ]
 }

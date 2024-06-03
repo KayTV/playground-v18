@@ -1,1 +1,19 @@
-<p>movie-info works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <app-back-button [routeLink]="'/'" [textDisplay]="'Back to Home'"></app-back-button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>movie-info works!</p>
+            <p>{{ movieId }} {{ movie?.name }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a href="#" class="btn btn-primary pull-left">Update Movie</a>
+        </div>
+    </div>
+</div>
+

@@ -30,7 +30,10 @@ export class HomeComponent implements OnInit {
 
   getMovies(): void {
     this.movieService.getAllMovies().then((movies) => {
-      this.movieList = movies;
+      if (movies.length > 0) {
+        this.movieList = movies;
+        this.movieService.lengthOfMovieList = movies.length;
+      }
     });
     this.array.reverse();
     console.log(this.array);

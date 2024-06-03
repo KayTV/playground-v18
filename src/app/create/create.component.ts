@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import { MoviesService } from '../services/movies.service';
 import { Movies } from '../models/movies.model';
+import { BackButtonComponent } from '../common/back-button/back-button.component';
 
 @Component({
   selector: 'app-create',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, BackButtonComponent],
   templateUrl: './create.component.html',
   styleUrl: './create.component.scss'
 })
@@ -25,7 +26,7 @@ export class CreateComponent {
   submitMovie(): void {
     console.log(this.movieForm);
     const request: Movies = {
-      id: 11,
+      id: this.movieService.lengthOfMovieList + 1,
       name: this.movieForm.value.movieTitle!,
       genre: this.movieForm.value.genre!,
       longDesc: this.movieForm.value.description!

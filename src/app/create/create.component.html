@@ -1,4 +1,9 @@
 <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <app-back-button [routeLink]="'/'" [textDisplay]="'Back to Home'"></app-back-button>
+        </div>
+    </div>
     <form [formGroup]="movieForm" (submit)="submitMovie()">
         <div class="row">
             <div class="col-md-4">

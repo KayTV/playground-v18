@@ -8,6 +8,7 @@ import { Movies } from '../models/movies.model';
 })
 export class MoviesService {
   moviesUrl = 'http://localhost:3000/movies';
+  lengthOfMovieList: number = 0;
 
   constructor() { }
 
