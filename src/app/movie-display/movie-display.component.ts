@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Movies } from '../models/movies.model';
 import { RouterModule } from '@angular/router';
 import { MoviesService } from '../services/movies.service';
@@ -12,6 +12,7 @@ import { MoviesService } from '../services/movies.service';
 })
 export class MovieDisplayComponent {
   @Input() movie: Movies | undefined;
+  @Output() movieDeleted = new EventEmitter<Movies>();
 
   constructor(
     private movieService: MoviesService

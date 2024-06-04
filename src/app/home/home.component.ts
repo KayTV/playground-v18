@@ -16,9 +16,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  array = [1, 2, 3, 4, 5, 6, 7];
   name: string = '';
   movieList: Movies[] = [];
+  genreDropdown: string[] = [];
 
   constructor(
     private movieService: MoviesService
@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
       if (movies.length > 0) {
         this.movieList = movies;
         this.movieService.lengthOfMovieList = movies.length;
+        this.getGenreDropdown();
       }
     });
   }
@@ -42,6 +43,18 @@ export class HomeComponent implements OnInit {
     this.movieService.getOMDBData().subscribe((value) => {
       console.log(value);
     });
+  }
+
+  getGenreDropdown(): void {
+    this.genreDropdown = [];
+    this.movieList.forEach((movie) => {
+      movie.genre?.toLowerCase();
+      const repeatMovie = this.genreDropdown.find(genre => genre === movie.genre);
+      if (repeatMovie === undefined && movie.genre !== undefined) {
+        this.genreDropdown.push(movie.genre!);
+      }
+    });
+    console.log(this.genreDropdown);
   }
 
 }

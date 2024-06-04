@@ -9,6 +9,14 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-3 form-group">
+            <select class="form-control" id="inputGroupSelect03">
+                <option selected>Choose...</option>
+                <option *ngFor="let genre of genreDropdown" value="{{genre}}">{{genre}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-3" *ngFor="let movie of movieList">
             <app-movie-display [movie]="movie"></app-movie-display>
         </div>
