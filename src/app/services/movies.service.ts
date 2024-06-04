@@ -8,13 +8,20 @@ import { Movies } from '../models/movies.model';
 })
 export class MoviesService {
   moviesUrl = 'http://localhost:3000/movies';
+  omdbUrl = 'http://www.omdbapi.com/?i=tt3896198&apikey=c8de31d1';
   lengthOfMovieList: number = 0;
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   async getAllMovies(): Promise<Movies[]> {
     const data = await fetch(this.moviesUrl);
     return (await data.json()) ?? [];
+  }
+
+  getOMDBData(): Observable<Movies> {
+    return this.http.get<Movies>(this.omdbUrl);
   }
 
   async getMovieById(id: number): Promise<Movies | undefined> {

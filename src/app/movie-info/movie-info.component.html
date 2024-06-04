@@ -1,13 +1,33 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <app-back-button [routeLink]="'/'" [textDisplay]="'Back to Home'"></app-back-button>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <p>movie-info works!</p>
-            <p>{{ movieId }} {{ movie?.name }}</p>
+        <div class="col-md-12 d-flex justify-content-center">
+            <h2>{{ movie?.name }}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <img class="movie-poster" rel="preconnect" [src]="movie?.image" alt="Card image cap">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="movieTitle">Movie Title:</label>
+            <input type="text" class="form-control" id="movieTitle" aria-describedby="movies" [disabled]="true" [ngModel]="movie?.name" placeholder="Enter name">
+        </div>
+        <div class="col-md-4">
+            <label for="movieTitle">Genre:</label>
+            <input type="text" class="form-control" id="movieGenre" aria-describedby="genre" placeholder="Genre">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="movieTitle">Description:</label>
+            <input type="text" class="form-control" id="description" aria-describedby="description" placeholder="Description">
         </div>
     </div>
     <div class="row">

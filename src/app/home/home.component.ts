@@ -25,7 +25,8 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getMovies()
+    this.getMovies();
+    this.getOmdbMovie();
   }
 
   getMovies(): void {
@@ -35,9 +36,12 @@ export class HomeComponent implements OnInit {
         this.movieService.lengthOfMovieList = movies.length;
       }
     });
-    this.array.reverse();
-    console.log(this.array);
+  }
 
+  getOmdbMovie(): void {
+    this.movieService.getOMDBData().subscribe((value) => {
+      console.log(value);
+    });
   }
 
 }
