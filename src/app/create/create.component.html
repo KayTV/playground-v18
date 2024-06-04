@@ -18,7 +18,15 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <img class="card-img-top" rel="preconnect" [src]="movieFromSearch?.Poster" alt="Card image cap">
+                <div class="media">
+                    <div class="media-left media-top">
+                        <img [src]="movieFromSearch.Poster" class="media-object" style="width:60px">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{ movieFromSearch.Title }}</h4>
+                        <p>{{ movieFromSearch.Plot }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     } @else {
@@ -37,6 +45,16 @@
         </div>
         <div class="row">
             <div class="col-md-4">
+                <label for="image">Poster:</label>
+                <input type="text" class="form-control" id="image" aria-describedby="image" formControlName="movieImage" placeholder="Poster">
+            </div>
+            <div class="col-md-4">
+                <label for="director">Director:</label>
+                <input type="text" class="form-control" id="director" aria-describedby="director" formControlName="director" placeholder="Director">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
                 <label for="movieTitle">Description:</label>
                 <textarea rows="5" class="form-control" id="description" aria-describedby="description" formControlName="description" placeholder="Description"></textarea>
             </div>
@@ -46,5 +64,10 @@
                 <button class="btn btn-primary">Create Movie</button>
             </div>
         </div>
-    </form>     
+    </form>
+    @if (movieAdded) {
+        <div class="alert alert-success">
+            <strong>Success!</strong> Movie added
+        </div>
+    }     
 </div>

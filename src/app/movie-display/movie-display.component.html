@@ -2,7 +2,7 @@
   <img class="card-img-top" rel="preconnect" [src]="movie?.image" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{movie?.name}}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">{{movie?.longDesc}}</p>
     <a (click)="deleteMovie(movie!)" class="btn btn-primary pull-left">Delete</a>
     <a [routerLink]="['/details', movie?.id]" class="btn btn-primary pull-right">More Details</a>
   </div>
