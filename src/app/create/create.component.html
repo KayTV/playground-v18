@@ -4,6 +4,26 @@
             <app-back-button [routeLink]="'/'" [textDisplay]="'Back to Home'"></app-back-button>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="searchForMovie">Look for Movie:</label>
+            <input type="text" class="form-control" id="searchForMovie" aria-describedby="searchForMovie" [ngModel]="movieSearch" (ngModelChange)="searchForMovie($event)" placeholder="Search Movie Database">
+        </div>
+    </div>
+    @if (movieFromSearch) {
+        <div class="row">
+            <div class="col-md-12">
+                <h5>{{ movieFromSearch.Title }}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <img class="card-img-top" rel="preconnect" [src]="movieFromSearch?.Poster" alt="Card image cap">
+            </div>
+        </div>
+    } @else {
+        <div>Search</div>
+    }
     <form [formGroup]="movieForm" (submit)="submitMovie()">
         <div class="row">
             <div class="col-md-4">

@@ -24,6 +24,10 @@ export class MoviesService {
     return this.http.get<Movies>(this.omdbUrl);
   }
 
+  getOMDBMovieByName(movie: string): Observable<any> {
+    return this.http.get<any>('http://www.omdbapi.com/?t=' + movie + '&apikey=c8de31d1');
+  }
+
   async getMovieById(id: number): Promise<Movies | undefined> {
     const data = await fetch(`${this.moviesUrl}/${id}`);
     return (await data.json()) ?? {};

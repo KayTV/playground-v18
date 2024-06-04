@@ -6,6 +6,7 @@ import { Movies } from '../models/movies.model';
 import { CommonModule } from '@angular/common';
 import { MovieDisplayComponent } from '../movie-display/movie-display.component';
 import { RouterModule } from '@angular/router';
+import { error } from 'console';
 
 @Component({
   selector: 'app-home',
@@ -40,8 +41,9 @@ export class HomeComponent implements OnInit {
   }
 
   getOmdbMovie(): void {
-    this.movieService.getOMDBData().subscribe((value) => {
-      console.log(value);
+    this.movieService.getOMDBData().subscribe({
+      next: (value) => {console.log(value)},
+      error: (error) => {console.log(error)}
     });
   }
 
