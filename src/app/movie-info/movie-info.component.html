@@ -21,13 +21,13 @@
         </div>
         <div class="col-md-4">
             <label for="movieTitle">Genre:</label>
-            <input type="text" class="form-control" id="movieGenre" aria-describedby="genre" placeholder="Genre">
+            <input type="text" class="form-control" id="movieGenre" aria-describedby="genre" [ngModel]="movie?.genre" placeholder="Genre">
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
             <label for="movieTitle">Description:</label>
-            <input type="text" class="form-control" id="description" aria-describedby="description" placeholder="Description">
+            <textarea rows="5" class="form-control" id="description" aria-describedby="description" [ngModel]="movie?.longDesc" placeholder="Description"></textarea>
         </div>
     </div>
     <div class="row">
