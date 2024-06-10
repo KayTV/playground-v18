@@ -1,8 +1,10 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <a [routerLink]="['/create']" class="btn btn-primary">Add A New Movie</a>
+            <app-navbar></app-navbar>
         </div>
+    </div>
+    <div class="row">
         <div class="col-md-12">
             <p>Hello {{name}}</p>
             <input type="text" class="form-control" [(ngModel)]="name" id="movieSearch" aria-describedby="movies" placeholder="Enter name">
@@ -10,7 +12,8 @@
     </div>
     <div class="row">
         <div class="col-md-3 form-group">
-            <select class="form-control" id="inputGroupSelect03">
+            <label for="genre">Genre</label>
+            <select class="form-control" id="genre">
                 <option selected>Choose...</option>
                 <option *ngFor="let genre of genreDropdown" value="{{genre}}">{{genre}}</option>
             </select>

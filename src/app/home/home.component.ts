@@ -7,11 +7,12 @@ import { CommonModule } from '@angular/common';
 import { MovieDisplayComponent } from '../movie-display/movie-display.component';
 import { RouterModule } from '@angular/router';
 import { error } from 'console';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CreateComponent, FormsModule, CommonModule, MovieDisplayComponent, RouterModule],
+  imports: [CreateComponent, FormsModule, CommonModule, MovieDisplayComponent, RouterModule, NavbarComponent],
   providers: [MoviesService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
