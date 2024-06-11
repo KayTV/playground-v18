@@ -6,13 +6,13 @@ import { Movies } from '../models/movies.model';
 import { CommonModule } from '@angular/common';
 import { MovieDisplayComponent } from '../movie-display/movie-display.component';
 import { RouterModule } from '@angular/router';
-import { error } from 'console';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { FilterComponent } from '../filter/filter.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CreateComponent, FormsModule, CommonModule, MovieDisplayComponent, RouterModule, NavbarComponent],
+  imports: [CreateComponent, FormsModule, CommonModule, MovieDisplayComponent, RouterModule, NavbarComponent, FilterComponent],
   providers: [MoviesService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

@@ -1,7 +1,8 @@
 <div class="card" style="width: 18rem;">
+  <div class="card-header bg-transparent"><h5>{{movie?.name}}</h5></div>
   <img class="card-img-top" rel="preconnect" [src]="movie?.image" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">{{movie?.name}}</h5>
+    <h5 class="card-title">Genre: {{movie?.genre}}</h5>
     <p class="card-text">{{movie?.longDesc}}</p>
   </div>
   <div class="card-footer">
